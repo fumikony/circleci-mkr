@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: mackerel/mkr
+    steps:
+      - checkout
+      - run: apk add --no-cache git
+      - run: git pull
+      - run: mkr monitors help
