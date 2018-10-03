@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: mackerel/mkr
     steps:
-      - checkout
       - run: apk add --no-cache git
+      - checkout
       - run: git pull
       - run: mkr monitors help
